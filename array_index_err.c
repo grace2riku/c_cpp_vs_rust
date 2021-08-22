@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int main() 
 {
     unsigned char a[3] = {0, 1, 2};
