@@ -1,0 +1,53 @@
+@startuml
+
+abstract Shape {
+    {abstract} print_type()
+    {abstract} calc_area()
+}
+note left: 図形クラス
+note right of Shape::print_type
+  図形の名称表示
+end note
+note right of Shape::calc_area
+  面積計算
+end note
+
+class Circle {
+    float r
+    print_type()
+    calc_area()
+}
+note bottom: 円クラス
+note right of Circle::r
+  半径
+end note
+
+class Triangle {
+    float base
+    float height
+    print_type()
+    calc_area()
+}
+note bottom: 三角形クラス
+note right of Triangle::base
+  底辺
+end note
+note right of Triangle::height
+  高さ
+end note
+
+
+class Square {
+    float side
+    print_type()
+    calc_area()
+}
+note bottom: 正方形クラス
+note right of Square::side
+  辺
+end note
+
+Shape <|-- Circle
+Shape <|-- Triangle
+Shape <|-- Square
+@enduml
